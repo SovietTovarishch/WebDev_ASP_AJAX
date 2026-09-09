@@ -12,7 +12,7 @@ body {
   padding: 35px;
   background: white;
   border-radius: 20px;
-  box-shadow: o 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -49,8 +49,8 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  
-
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 /* .form-group input[type="text"],
 .form-group input[type="tel"],
