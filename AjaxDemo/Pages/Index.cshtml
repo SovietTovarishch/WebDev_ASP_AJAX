@@ -146,6 +146,8 @@
 </div>
 
 <script>
+    const form = document.querySelector("form");
+    const button = form.querySelector("button");
     let isSubmitting = false;
     form.addEventListener("submit", async function(event) {
         event.preventDefault();
@@ -162,19 +164,17 @@
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         try {
-            const form = document.querySelector("form");
-            const button = form.querySelector("button");
 
             const response = await fetch("", {
             method: "POST", 
             body: formData
+            }); 
             const result = await response.text();
             document.querySelector("#result").textContent = result;
             button.textContent = "Анкета успешно отправлена (⌐■_■)"
             await new Promise(resolve => setTimeout(resolve, 2000));
             console.log(button);
             button.textContent = "Отправить";
-        }); 
         }
         catch(error) {
             console.error("Ошибка при отправке", error);
