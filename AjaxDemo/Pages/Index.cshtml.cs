@@ -19,22 +19,37 @@ public class IndexModel : PageModel
     public string BirthDate { get; set; }
     [BindProperty]
     public string[] Technologies { get; set; } = Array.Empty<string>();
+    [BindProperty]
+    public string City { get; set; }
+    [BindProperty]
+    public string MainLang { get; set; }
+    [BindProperty]
+    public string StudyForm { get; set; }
+    [BindProperty]
+    public string ExtraInfo { get; set; }
     public string Message { get; set; }
-    public void OnGet() {
-       // Message = "Привет! Сообщение от C#";
+    public void OnGet()
+    {
+        // Message = "Привет! Сообщение от C#";
     }
-    public void OnPost() {
-        string technologies = Technologies.Length > 0 
+    public IActionResult OnPost() {
+        string technologies = Technologies.Length > 0
             ? string.Join(", ", Technologies)
             : "Не выбраны";
 
-        Message = $"Анкета студента\n\n" +
-            $"Имя: {Name}\n" +
-            $"Телефон: {Phone}\n" +
-            $"Email: {Email}\n" +
-            $"Специальность: {Speciality}\n" +
-            $"Курс: {Course}\n" + 
-            $"Дата Рождения: {BirthDate}\n" + 
-            $"Технологии: {technologies}";
-    }  
+        string message = $"Анкета студента\n\n" +
+                $"Имя: {Name}\n" + 
+                $"Телефон: {Phone}\n" +
+                $"Email: {Email}\n" +
+                $"Специальность: {Speciality}\n" +
+                $"Курс: {Course}\n" +
+                $"Дата рождения: {BirthDate}\n" +
+                $"Технологии: {technologies}\n" +
+                $"Город: {City}\n" +
+                $"Основной язык программирования: {MainLang}\n" +
+                $"Режим обучения: {StudyForm}\n" +
+                $"Доп. информация: {ExtraInfo}";
+
+        return Content(message);
+    }
 }

@@ -1,5 +1,12 @@
 ﻿@page
 @model IndexModel
+@* @{
+    Layout = null;
+    } *@
+
+@* @{
+    ViewData["Title"] = "Home page";
+    } *@
 
 <div class="form-container">
 
@@ -8,20 +15,22 @@
     <p class="description">
         Введите свои данные
     </p>
+
     <form method="post">
+
         <div class="form-group">
             <label>Имя-фамилия:</label>
-            <input type="text" name="Name" placeholder="Введите имя" required/>
+            <input type="text" name="Name" placeholder="Введите имя" required>
         </div>
 
         <div class="form-group">
             <label>Номер телефона:</label>
-            <input type="tel" name="Phone" placeholder="+7" required/>
+            <input type="tel" name="Phone" placeholder="+7" required>
         </div>
 
         <div class="form-group">
             <label>Email:</label>
-            <input type="email" name="Email" placeholder="email@example.com" required/>
+            <input type="email" name="Email" placeholder="email@example.com" required>
         </div>
 
         <div class="form-group">
@@ -29,18 +38,18 @@
 
             <div class="speciality">
 
-                <input type="radio" name="Speciality" value="Программирование" checked>
+                <input type="radio" name="Speciality" value="Программирование" id="dev">
                 <label for="dev">Программирование</label>
 
                 <br>
 
-                <input type="radio" name="Speciality" value="Дизайн">
-                <label for="dev">Дизайн</label>
+                <input type="radio" name="Speciality" value="Дизайн" id="design">
+                <label for="design">Дизайн</label>
 
                 <br>
 
-                <input type="radio" name="Speciality" value="Маркетинг">
-                <label for="dev">Маркетинг</label>
+                <input type="radio" name="Speciality" value="Маркетинг" id="marketing">
+                <label for="marketing">Маркетинг</label>
 
             </div>
         </div>
@@ -62,22 +71,58 @@
             <div class="speciality">
                 <input type="checkbox" name="Technologies" value="HTML/CSS" id="html">
                 <label for="html">HTML/CSS</label>
-
                 <br>
-
-                <input type="checkbox" name="Technologies" value="Javascript" id="js">
-                <label for="js">Javascript</label>
-
+                <input type="checkbox" name="Technologies" value="JavaScript" id="js">
+                <label for="js">JavaScript</label>
                 <br>
-
                 <input type="checkbox" name="Technologies" value="C#" id="csharp">
                 <label for="csharp">C#</label>
-
                 <br>
-
                 <input type="checkbox" name="Technologies" value="Python" id="python">
                 <label for="python">Python</label>
             </div>
+        </div>
+        <div class="form-group">
+            <label for="cities">Город:</label>
+            <select name="City" id="cities">
+                <option value="Moscow">Москва</option>
+                <option value="St_Petersburg">Санкт Петербург</option>
+                <option value="Krasnodar">Краснодар</option>
+                <option value="Sochi">Сочи</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="main-lang">Основной язык программирования:</label>
+            <select name="MainLang" id="langs">
+                <option value="html">HTML/CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="csharp">C#</option>
+                <option value="python">Python</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Формат обучения:</label>
+
+            <div class="study-form">
+
+                <input type="radio" name="StudyForm" value="Очно" id="ons">
+                <label for="ons">Очно</label>
+
+                <br>
+
+                <input type="radio" name="StudyForm" value="Заочно" id="outs">
+                <label for="outs">Заочно</label>
+
+                <br>
+
+                <input type="radio" name="StudyForm" value="Дистанционно" id="dist">
+                <label for="dist">Дистанционно</label>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="main-lang">Информация о себе:</label>
+            <textarea name="ExtraInfo" id="extra-info" placeholder="Дополнительная информация о вас" autocomplete="off"></textarea>
         </div>
         <button class="form-button" type="submit">
             Отправить
@@ -85,7 +130,9 @@
 
     </form>
 
-    @if (Model.Message != null) 
+    <div id="result" class="result"></div>
+
+    @if (Model.Message != null)
     {
         <div class="result">
             <h3>Данные анкеты:</h3>
@@ -95,5 +142,47 @@
             </p>
         </div>
     }
+
 </div>
 
+<script>
+    let isSubmitting = false;
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        if (isSubmitting) return;
+
+        isSubmitting = true;
+
+        const formData = new FormData(form);
+
+        button.textContent = "Отправка..."
+        button.disabled = true;
+        console.log(button);
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        try {
+            const form = document.querySelector("form");
+            const button = form.querySelector("button");
+
+            const response = await fetch("", {
+            method: "POST", 
+            body: formData
+            const result = await response.text();
+            document.querySelector("#result").textContent = result;
+            button.textContent = "Анкета успешно отправлена (⌐■_■)"
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            console.log(button);
+            button.textContent = "Отправить";
+        }); 
+        }
+        catch(error) {
+            console.error("Ошибка при отправке", error);
+        }
+        finally {
+        isSubmitting = false;
+        button.disabled = false;
+        console.log(button);
+        }
+    })
+</script>
