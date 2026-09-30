@@ -63,12 +63,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="">Дата рождения:</label>
+            <label>Дата рождения:</label>
             <input type="date" name="BirthDate" required>
         </div>
         <div class="form-group">
-            <label for="">Технологии:</label>
-            <div class="speciality">
+            <label>Технологии:</label>
+            <div class="technologies">
                 <input type="checkbox" name="Technologies" value="HTML/CSS" id="html">
                 <label for="html">HTML/CSS</label>
                 <br>
@@ -92,7 +92,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="main-lang">Основной язык программирования:</label>
+            <label for="langs">Основной язык программирования:</label>
             <select name="MainLang" id="langs">
                 <option value="html">HTML/CSS</option>
                 <option value="js">JavaScript</option>
@@ -121,21 +121,27 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="main-lang">Информация о себе:</label>
+            <label for="extra-info">Информация о себе:</label>
             <textarea name="ExtraInfo" id="extra-info" placeholder="Дополнительная информация о вас" autocomplete="off"></textarea>
         </div>
         <button class="form-button" type="submit">
             Отправить
         </button>
+        <button class="clear-button" type="reset">
+            Очистить
+        </button>
 
     </form>
+
+    <div id="status" class="status"></div>
+
     <div id="result" class="student-card">
         <div class="student-card-header">
             <h2>Анкета отправлена</h2>
             <p>Данные студента</p>
         </div>
 
-        <div id="result" class="student-info">
+        <div class="student-info">
             <div class="info-item">
                 <span>Имя:</span>
                 <strong id="result-name"></strong>
@@ -197,8 +203,9 @@
 
 <script>
     const form = document.querySelector("form");
+    const button = form.querySelector("button[type='submit']");
+    const status = document.querySelector('#status');
 
-    const button = form.querySelector("button");
     let isSubmitting = false;
 
     form.addEventListener("submit", async function(event) {
@@ -212,16 +219,20 @@
 
         button.textContent = "Отправка..."
         button.disabled = true;
-        console.log(button);
+
 
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         try {
 
             const response = await fetch("", {
-            method: "POST", 
-            body: formData
+                method: "POST", 
+                body: formData
             }); 
+
+            if (!response.ok) {
+                throw new Error("Ошибка сервера");
+            }
 
             const data = await response.json();
             button.textContent = "Анкета успешно отправлена (⌐■_■)"
@@ -239,17 +250,26 @@
             document.querySelector("#result-extrainfo").textContent = data.ExtraInfo;
 
             document.querySelector("#result").style.display = "block";
-            console.log(button);
+
+
+            status.textContent = "Анкета успешно отправлена"
+            console.log(data.Name)
             await new Promise(resolve => setTimeout(resolve, 2000));
-            button.textContent = "Отправить";
         }
         catch(error) {
-            console.error("Ошибка при отправке", error);
+            status.textContent = "Не удалось отправить анкету"
+
         }
         finally {
         isSubmitting = false;
         button.disabled = false;
-        console.log(button);
+        button.textContent = "Отправить";
+
         }
+    })
+
+    form.addEventListener("reset", function () {
+        document.querySelector('#result').style.display = 'none';
+        document.querySelector('#status').textContent = '';
     })
 </script>

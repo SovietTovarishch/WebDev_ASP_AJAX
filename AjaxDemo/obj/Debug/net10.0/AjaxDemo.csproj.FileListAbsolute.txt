@@ -95,4 +95,4 @@ C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed
 C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\jx3jnpwa5j-{0}-o1o13a6vjx-o1o13a6vjx.gz
 C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\h52hd4zihy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
 C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\awpfxwwiz7-{0}-muycvpuwrr-muycvpuwrr.gz
-C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-sa089zgko6-sa089zgko6.gz
+C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-yhwdy1i3k4-yhwdy1i3k4.gz

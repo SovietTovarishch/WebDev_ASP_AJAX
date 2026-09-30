@@ -76,16 +76,19 @@ outline: none;
 border-color: #007bff;
 }
 
-.speciality {
+.speciality,
+.technologies {
 margin-top: 10px;
 }
 
-.speciality label {
+.speciality label, 
+.technologies label{
 font-weight: normal;
 margin-left: 5px;
 }
 
-.speciality input {
+.speciality input, 
+.technologies input{
 margin-bottom: 20px;
 }
 
@@ -111,20 +114,36 @@ background: #007bff;
 color: white;
 font-size: 16px;
 cursor: pointer;
+margin-bottom: 20px;
 }
 
 .form-button:hover {
 background: #0056b3;
 }
 
-.student-card {
+.clear-button {
+width: 100%;
+padding: 13px;
+border: 1px solid #0056b3;
+border-radius: 10px;
+background: #ffffff;
+color: #0056b3;
+font-size: 16px;
+cursor: pointer;
+}
+
+.clear-button:hover {
+background: #ededed;
+}
+
+#result {
   display: none;
-margin-top: 25px;
-padding: 25px;
-background: #e4e4e4;
-border-radius: 32px;
-text-align: left;
-font-family: 'Courier New', Courier, monospace;
+  margin-top: 25px;
+  padding: 25px;
+  background: #e4e4e4;
+  border-radius: 32px;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .student-card h2{
@@ -135,7 +154,6 @@ font-family: 'Courier New', Courier, monospace;
   font-style: italic;
   
 }
-
 
 .form-group textarea {
   min-height: 100px;
