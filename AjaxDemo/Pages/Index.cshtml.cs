@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using AjaxDemo.Models;
 
 namespace AjaxDemo.Pages;
 
@@ -28,7 +29,10 @@ public class IndexModel : PageModel
     public string StudyForm { get; set; }
     [BindProperty]
     public string ExtraInfo { get; set; }
+    public static List<Student> Students { get; set; } = new();
+
     public string Message { get; set; }
+
     public void OnGet()
     {
         // Message = "Привет! Сообщение от C#";
@@ -51,23 +55,41 @@ public class IndexModel : PageModel
         //         $"Режим обучения: {StudyForm}\n" +
         //         $"Доп. информация: {ExtraInfo}";
 
-        var student = new 
+        var student = new Student
         {
-            Name,
-            Phone,
-            Email,
-            Speciality,
-            Course,
-            BirthDate,
-            Technologies,
-            City,
-            MainLang,
-            StudyForm,
-            ExtraInfo
+            Students.Count++,
+            Name = Name,
+            Phone = Phone,
+            Email = Email,
+            Speciality = Speciality,
+            Course = Course,
+            BirthDate = BirthDate,
+            Technologies = Technologies,
+            City = City,
+            MainLang = MainLang,
+            StudyForm = StudyForm,
+            ExtraInfo = ExtraInfo
         };
-        return Content(
-            JsonSerializer.Serialize(student),
-            "application/json"
-        );
+
+        Students.Add(student);
+
+        return new JsonResult(student);
+    }
+    public IActionResult OnGetStudents() {
+        return new JsonResult(Students);
+    }
+
+    public IActionResult OnPostDelete(int Id) {
+        var student = Students.FirstOrDefault(x => x.Id == Id);
+        if (student == null) {
+            return new JsonResult(new{
+                success = false,
+                message = "Студент не найден"
+            });
+        }
+        Students.Remove(student);
+        return new JsonResult(new{
+            success = true
+        });
     }
 }
