@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AjaxDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b338d0526809cdab0d9d7782ecd5fc0645c6a579")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8e56c12a19e2fad682879a2feba0f004463740f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AjaxDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AjaxDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
