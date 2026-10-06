@@ -99,15 +99,7 @@ C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed
 C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-yhwdy1i3k4-yhwdy1i3k4.gz
 =======
 C:\Users\106010115\Desktop\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-sa089zgko6-sa089zgko6.gz
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\appsettings.Development.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\appsettings.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.staticwebassets.runtime.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.staticwebassets.endpoints.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.exe
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.deps.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.runtimeconfig.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.dll
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\bin\Debug\net10.0\AjaxDemo.pdb
+>>>>>>> b16e0ed1c11cca14f277b19b38adffade15b6fb8
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\AjaxDemo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\AjaxDemo.AssemblyInfoInputs.cache
@@ -123,7 +115,7 @@ C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\rjs
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\scopedcss\bundle\AjaxDemo.styles.css
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\scopedcss\projectbundle\AjaxDemo.bundle.scp.css
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-x53liv0kre-x53liv0kre.gz
+C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\zc7wkxwixj-{0}-ns9tqpkwsc-ns9tqpkwsc.gz
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\9v8o5nli80-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\e5y7v3vcr6-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\lcag1pw9fr-{0}-t1cqhe9u97-t1cqhe9u97.gz
@@ -187,14 +179,6 @@ C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\com
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\uhgzpuyk98-{0}-mlv21k5csn-mlv21k5csn.gz
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\fvgrq33ost-{0}-uusyx4eox7-uusyx4eox7.gz
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\compressed\q4343yytsi-{0}-uusyx4eox7-uusyx4eox7.gz
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\staticwebassets.build.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\staticwebassets.build.json.cache
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\staticwebassets.development.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\staticwebassets.build.endpoints.json
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\swae.build.ex.cache
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\AjaxDemo.dll
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\refint\AjaxDemo.dll
 C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\AjaxDemo.pdb
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\AjaxDemo.genruntimeconfig.cache
-C:\Users\106010115\Desktop\WebDev\WebDev_ASP_AJAX\AjaxDemo\obj\Debug\net10.0\ref\AjaxDemo.dll
->>>>>>> b16e0ed1c11cca14f277b19b38adffade15b6fb8

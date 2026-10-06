@@ -8,30 +8,30 @@ namespace AjaxDemo.Pages;
 public class IndexModel : PageModel
 {
     [BindProperty]
-    public string Name { get; set; }
+    public required string Name { get; set; }
     [BindProperty]
-    public string Phone { get; set; }
+    public required string Phone { get; set; }
     [BindProperty]
-    public string Email { get; set; }
+    public required string Email { get; set; }
     [BindProperty]
-    public string Speciality { get; set; }
+    public required string Speciality { get; set; }
     [BindProperty]
-    public string Course { get; set; }
+    public required string Course { get; set; }
     [BindProperty]
-    public string BirthDate { get; set; }
+    public required string BirthDate { get; set; }
     [BindProperty]
     public string[] Technologies { get; set; } = Array.Empty<string>();
     [BindProperty]
-    public string City { get; set; }
+    public required string City { get; set; }
     [BindProperty]
-    public string MainLang { get; set; }
+    public required string MainLang { get; set; }
     [BindProperty]
-    public string StudyForm { get; set; }
+    public required string StudyForm { get; set; }
     [BindProperty]
-    public string ExtraInfo { get; set; }
+    public required string ExtraInfo { get; set; }
     public static List<Student> Students { get; set; } = new();
 
-    public string Message { get; set; }
+    public required string Message { get; set; }
 
     public void OnGet()
     {
@@ -55,9 +55,8 @@ public class IndexModel : PageModel
         //         $"Режим обучения: {StudyForm}\n" +
         //         $"Доп. информация: {ExtraInfo}";
 
-        var student = new Student
-        {
-            Students.Count++,
+        var student = new Student {
+            Id = Students.Any() ? Students.Max(x => x.Id) + 1 : 1,
             Name = Name,
             Phone = Phone,
             Email = Email,
@@ -79,8 +78,8 @@ public class IndexModel : PageModel
         return new JsonResult(Students);
     }
 
-    public IActionResult OnPostDelete(int Id) {
-        var student = Students.FirstOrDefault(x => x.Id == Id);
+    public IActionResult OnPostDelete(int id) {
+        var student = Students.FirstOrDefault(x => x.Id == id);
         if (student == null) {
             return new JsonResult(new{
                 success = false,
