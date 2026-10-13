@@ -9,11 +9,11 @@ body {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   color: #171717;
-  background-image: url(/images/catVoid.png);
+  /* background-image: url(/images/catVoid.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: fixed; */
 }
 .site-main {
   flex: 1;
