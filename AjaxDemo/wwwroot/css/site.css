@@ -443,3 +443,72 @@ background: #ededed;
     padding: 22px;
   }
 }
+/* каталог резюме - форма для фильтра */
+.resume-search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 30px 0 20px;
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #171717;
+  font: inherit;
+}
+.search-field input:focus,
+.search-field select:focus {
+  border: 2px solid #3563e9;
+  outline: none;
+  outline-offset: 1px;
+}
+.search-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.search-actions button {
+  cursor: pointer;
+  font-size: inherit;
+}
+.search-reset {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.search-reset:hover {
+  color: #3563e9;
+}
+@media (max-width: 650px) {
+  .resume-search-form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .search-actions {
+    grid-column: auto;
+  }
+}
