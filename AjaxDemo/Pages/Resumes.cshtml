@@ -13,6 +13,30 @@
             </p>
         </div>
 
+        <form method="get" class="resume-search-form">
+            <div class="search-field">
+                <label for="search">Имя кандидата</label>
+                <input type="text" id="search" name="search" 
+                value="@Model.Search" placeholder="Иван">
+            </div>
+            <div class="search-field">
+                <label for="specialityFilter">Специальность</label>
+                <select name="specialityFilter" id="specialityFilter">
+                    <option value="">Все специальности</option>
+                    @foreach (var speciality in Model.Specialities)
+                    {
+                        <option value="@speciality" 
+                        selected="@(Model.SpecialityFilter == speciality)">
+                        @speciality</option>
+                    }
+                </select>
+            </div>
+            <div class="search-actions">
+                <button type="submit" class="home-button">Найти резюме</button>
+                <a asp-page="/Resumes">Сбросить</a>
+            </div>
+        </form>
+
         <a class="home-button" asp-page="/CreateResume">
             Создать резюме
         </a>
