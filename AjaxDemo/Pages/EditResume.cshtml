@@ -1,0 +1,71 @@
+@page
+@model EditResumeModel
+
+<div>
+    <a class="resume-back-link" asp-page="/Resume" asp-route-id="@Model.Resume.Id">
+    Назад к резюме</a>
+
+    <div class="resume-detail-card">
+        <h1>Редактирование резюме</h1>
+        <p>Измени информацию и сохрани новые данные</p>
+
+        <form method="post" class="edit-resume-form">
+            <input type="hidden" asp-for="Resume.Id">
+            <div class="edit-field">
+                <label asp-for="Resume.Name">Имя и фамилия</label>
+                <input asp-for="Resume.Name" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.Phone">Телефон</label>
+                <input asp-for="Resume.Phone" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.Email">Email</label>
+                <input asp-for="Resume.Email" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.Speciality">Специальность</label>
+                <select asp-for="Resume.Speciality" required>
+                    <option value="">Выбери специальность</option>
+                    <option value="Программирование">Программирование</option>
+                    <option value="Дизайн">Дизайн</option>
+                    <option value="Маркетинг">Маркетинг</option>
+                </select>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.Course">Курс</label>
+                <input asp-for="Resume.Course" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.BirthDate">Дата рождения</label>
+                <input asp-for="Resume.BirthDate" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.Technologies">Технологии через пробел</label>
+                <input type="text" name="Resume.Technologies"
+                value="@string.Join(' ', Model.Resume.Technologies)" />
+                <small>Пример: HTML/CSS Javascript C#</small>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.City">Город</label>
+                <input asp-for="Resume.City" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.MainLang">Основной язык</label>
+                <input asp-for="Resume.MainLang" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.StudyForm">Форма обучения</label>
+                <input asp-for="Resume.StudyForm" required>
+            </div>
+            <div class="edit-field">
+                <label asp-for="Resume.ExtraInfo">Дополнительная информация</label>
+                <input asp-for="Resume.ExtraInfo" required>
+            </div>
+
+
+
+            <button type="submit" class="home-button">Сохранить изменения</button>
+        </form>
+    </div>
+</div>
