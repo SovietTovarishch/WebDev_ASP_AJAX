@@ -215,6 +215,21 @@ body {
   border-radius: 16px;
   text-align: center;
 }
+.resume-details-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #171717;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.resume-details-button:hover {
+  background: #3563e9;
+}
+
 @media (max-width: 700px) {
   .home-hero {
     padding: 40px 24px;
@@ -366,3 +381,134 @@ background: #ededed;
   resize: vertical;
 }
 
+/* РЕЗЮМЕ ОТДЕЛЬНАЯ СТРАНИЦА */
+
+.resume-detail-page {
+  max-width: 800px;
+  margin: 40px;
+  padding: 0 20px;
+}
+
+.resume-back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #555;
+  text-decoration: none;
+}
+
+.resume-detail-card{
+  padding: 32px;
+  border-radius: 18px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.resume-detail-card h1{
+  margin: 10px 0;
+  font-size: 40px;
+}
+
+.resume-course {
+  color: #666;
+}
+
+.resume-detail-section {
+  margin: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #eee;
+}
+
+.resume-detail-section h2 {
+  margin-bottom: 16px;
+  font-size: 19px;
+}
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-skill {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #2855c5;
+  /* text-decoration: none; */
+  font-weight: 600;
+  /* transition: all 0.2s ease; */
+}
+@media (max-width: 600px) {
+  .resume-detail-card {
+    padding: 22px;
+  }
+}
+/* каталог резюме - форма для фильтра */
+.resume-search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 30px 0 20px;
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff;
+  color: #171717;
+  font: inherit;
+}
+.search-field input:focus,
+.search-field select:focus {
+  border: 2px solid #3563e9;
+  outline: none;
+  outline-offset: 1px;
+}
+.search-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.search-actions button {
+  cursor: pointer;
+  font-size: inherit;
+}
+.search-reset {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.search-reset:hover {
+  color: #3563e9;
+}
+@media (max-width: 650px) {
+  .resume-search-form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .search-actions {
+    grid-column: auto;
+  }
+}
