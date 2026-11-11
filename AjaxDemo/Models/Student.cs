@@ -15,4 +15,6 @@ public class Student
     public string MainLang { get; set; } = "";
     public string StudyForm { get; set; } = "";
     public string ExtraInfo { get; set; } = "";
+    public string UserId { get; set; } = "";
+    public ApplicationUser? User { get; set; }
 } 
