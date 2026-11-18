@@ -1,0 +1,19 @@
+@page
+@model AjaxDemo.Pages.Account.Pages_Account_Login
+
+<h1>Вход в аккаунт</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Input.Email">Email</label>
+        <input asp-for="Input.Email" type="email">
+        <span asp-validation-for="Input.Email"></span>
+    </div>
+    <div>
+        <label asp-for="Input.Password">Пароль</label>
+        <input asp-for="Input.Password" type="password">
+        <span asp-validation-for="Input.Password"></span>
+    </div>
+</form>
+
+<div asp-validation-summary="All"></div>
