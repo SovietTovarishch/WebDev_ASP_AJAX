@@ -1,11 +1,11 @@
 @page
 @model AjaxDemo.Pages.Account.LoginModel
 
-<div class="container">
+<div class="auth-container">
 
     <h1>Вход в аккаунт</h1>
 
-    <form method="post">
+    <form method="post" class="auth-form">
         <div>
             <label asp-for="Input.Email">Email</label>
             <input asp-for="Input.Email" type="email">

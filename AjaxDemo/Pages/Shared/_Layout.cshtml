@@ -25,9 +25,7 @@
 
                 @if (User.Identity?.IsAuthenticated == true)
                 {
-                    <form method="post" asp-page="/Account/Logout">
-                        <button type="submit" class="nav-link btn btn-link">Выйти</button>
-                    </form>
+                    <a class="nav-link btn btn-link" asp-page="/Account/Logout">Выйти</a>
                 }
                 else
                 {
