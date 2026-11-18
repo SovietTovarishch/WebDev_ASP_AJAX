@@ -14,9 +14,12 @@ public class LogoutModel : PageModel
     {
         _signInManager = signInManager;
     }
-    public IActionResult OnGet()
+    // public IActionResult OnGet()
+    // {
+    //     return RedirectToPage("/Index"); 
+    // }
+    public void onGet()
     {
-        return RedirectToPage("/Index"); 
     }
     public async Task<IActionResult> OnPostAsync()
     {
