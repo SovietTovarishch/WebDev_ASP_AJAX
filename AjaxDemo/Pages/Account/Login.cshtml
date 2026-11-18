@@ -1,5 +1,5 @@
 @page
-@model AjaxDemo.Pages.Account.Pages_Account_Login
+@model AjaxDemo.Pages.Account.LoginModel
 
 <h1>Вход в аккаунт</h1>
 
@@ -14,6 +14,7 @@
         <input asp-for="Input.Password" type="password">
         <span asp-validation-for="Input.Password"></span>
     </div>
+    <button type="submit">Войти</button>
 </form>
 
 <div asp-validation-summary="All"></div>
