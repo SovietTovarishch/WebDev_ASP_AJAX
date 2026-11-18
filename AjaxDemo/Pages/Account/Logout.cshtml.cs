@@ -2,18 +2,23 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using AjaxDemo.Models;
 
 namespace AjaxDemo.Pages.Account;
 
 public class LogoutModel : PageModel
 {
-    private readonly SignInManager<Models.ApplicationUser> _signInManager;
+    private readonly SignInManager<ApplicationUser> _signInManager;
     public LogoutModel(
-        SignInManager<Models.ApplicationUser> signInManager)
+        SignInManager<ApplicationUser> signInManager)
     {
         _signInManager = signInManager;
     }
-    public async Task<IActionResult> OnGetAsync()
+    public IActionResult OnGet()
+    {
+        return RedirectToPage("/Index"); 
+    }
+    public async Task<IActionResult> OnPostAsync()
     {
         await _signInManager.SignOutAsync();
         return RedirectToPage("/Index");
